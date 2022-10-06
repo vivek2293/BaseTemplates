@@ -1,14 +1,29 @@
-import Hello from './pages/Hello';
-import Main from './pages/Main';
-import {Routes, Route} from "react-router-dom"
+import React from 'react';
+import Login from "../src/pages/Login";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Landingpage from './pages/Landingpage';
+import Profile from './pages/Profile';
 
 function App() {
   return (
     <>
-    <Routes>
-      <Route exact path= "/" element={<Main></Main>} />
-      <Route exact path= "/hi" element={<Hello></Hello>} />
-    </Routes>
+
+
+      <BrowserRouter>
+        <Routes>
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/profile" element={<Profile />} />
+          
+          
+
+
+        </Routes>
+
+
+
+      </BrowserRouter>
     </>
   );
 }
